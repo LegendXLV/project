@@ -7,12 +7,13 @@ _G.autoTap = true
 --functions
 
 function autoTap()
-   while _G.autoTap == true do
+    while _G.autoTap == true do
       game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
-   end
-  
+     end
+    end
+
 --tabs
-local Tab = Window:MakeTab({
+local AutoTab = Window:MakeTab({
 	Name = "Auto Farm",
 	Icon = "rbxassetid://4483345998",
    PremiumOnly = false
@@ -20,13 +21,15 @@ local Tab = Window:MakeTab({
 
 --toggles
 
-Tab:AddToggle({
+AutoTab:AddToggle({
 	Name = "Auto Tap",
 	Default = false,
 	Callback = function(Value)
 		autoTap()
 	end    
 })
+
+
 
 end
 OrionLib:Init()
