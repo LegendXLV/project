@@ -26,8 +26,10 @@ AutoTab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		autoTap()
-	end    
+	end 	   
 })
+
+
 
 
 OrionLib:Init()
